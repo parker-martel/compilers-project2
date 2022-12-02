@@ -1,3 +1,5 @@
+// CPSC 323 Compilers Project 2
+// Written and maintained by Parker Martel
 #include <iostream>
 #include <vector>
 #include <stack>
@@ -59,7 +61,7 @@ void trace(string input){
 
             // Accept if dollar signs match
             if (topStack == '$' & read == '$'){
-                cout << "ACCEPT\n\n";
+                cout << "\nACCEPT\n\n";
                 accepted = true;
                 break;
             }
@@ -145,6 +147,7 @@ string getTableRowColumn(char topStack, char read){
 
 int main(){
 
+    // Input strings
     vector<string> inputs = {"(a+a)*a$", "a*(a/a)$", "a(a+a)$"};
 
     for (int i = 0; i < inputs.size(); i++){
